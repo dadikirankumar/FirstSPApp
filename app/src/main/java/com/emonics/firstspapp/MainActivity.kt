@@ -3,6 +3,7 @@ package com.emonics.firstspapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 
 class MainActivity : AppCompatActivity() {
@@ -16,6 +17,8 @@ class MainActivity : AppCompatActivity() {
         prefHelper = PrefHelper(this)
 
         val button = findViewById<Button>(R.id.btnNext)
+
+        Log.d("Emonics", "New Changes")
 
         prefHelper.put("NAME", "EMONICS")
         prefHelper.put("ID", 123)
